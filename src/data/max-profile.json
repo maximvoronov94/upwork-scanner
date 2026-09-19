@@ -1,0 +1,182 @@
+{
+  "name": "Max",
+
+  "portfolio": "https://mvdev.click",
+
+  "skills": {
+    "frontend": [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind",
+      "responsive UI",
+      "dashboards",
+      "admin panels"
+    ],
+
+    "backend": [
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Python",
+      "FastAPI",
+      "REST APIs",
+      "Webhooks",
+      "backend business logic"
+    ],
+
+    "databases": [
+      "PostgreSQL",
+      "SQL",
+      "Supabase",
+      "Prisma",
+      "database design",
+      "migrations",
+      "queries"
+    ],
+
+    "ai": [
+      "Claude",
+      "OpenAI",
+      "LLM API integrations",
+      "AI agents",
+      "AI workflows",
+      "classification",
+      "summarization",
+      "human approval workflows",
+      "automation"
+    ],
+
+    "businessSystems": [
+      "CRM",
+      "ERP",
+      "inventory systems",
+      "warehouse systems",
+      "customer service systems",
+      "orders",
+      "returns",
+      "suppliers",
+      "internal tools",
+      "business dashboards"
+    ],
+
+    "developerTools": [
+      "VS Code extensions",
+      "Claude Code",
+      "Codex",
+      "AI coding workflows",
+      "local developer tooling",
+      "hooks"
+    ],
+
+    "integrations": [
+      "REST APIs",
+      "webhooks",
+      "authentication",
+      "RBAC",
+      "email integrations",
+      "Gmail integrations",
+      "transactional email",
+      "Stripe",
+      "third-party APIs"
+    ],
+
+    "automation": [
+      "Python scripts",
+      "Node.js automation",
+      "browser automation",
+      "Playwright",
+      "workflow automation"
+    ],
+
+    "web3": [
+      "crypto applications",
+      "wallet applications",
+      "blockchain integrations",
+      "transaction workflows",
+      "Web3 dashboards"
+    ],
+
+    "engineering": [
+      "bug fixing",
+      "existing codebases",
+      "MVP development",
+      "production fixes",
+      "deployment",
+      "debugging",
+      "testing",
+      "performance improvements"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "Claude Live Follow",
+      "description": "VS Code extension that follows files Claude Code reads, creates and edits using Claude Code hooks. Includes live preview, current file tracking, history and local processing.",
+      "bestFor": [
+        "Claude Code",
+        "VS Code extensions",
+        "developer tools",
+        "AI coding",
+        "hooks",
+        "local tooling"
+      ],
+      "url": "https://marketplace.visualstudio.com/items?itemName=mvdev.claude-live-follow"
+    },
+
+    {
+      "name": "AI Retail OS / CRM",
+      "description": "Large CRM/ERP style business platform covering CRM, customer service, inventory, warehouses, branches, products, suppliers, orders, returns, permissions, reporting, WhatsApp workflows, AI workflows and internal business tooling.",
+      "bestFor": [
+        "CRM",
+        "ERP",
+        "inventory",
+        "warehouse",
+        "PostgreSQL",
+        "business systems",
+        "permissions",
+        "AI workflows",
+        "internal tools",
+        "automation"
+      ]
+    },
+
+    {
+      "name": "Spec Wallet",
+      "description": "Production Web3 and crypto related application with application workflows, APIs, dashboards and wallet-related functionality.",
+      "bestFor": [
+        "Web3",
+        "crypto",
+        "wallets",
+        "APIs",
+        "dashboards",
+        "full stack"
+      ],
+      "url": "https://specwallet.com"
+    },
+
+    {
+      "name": "Spets Trading",
+      "description": "Trading focused web application.",
+      "bestFor": [
+        "trading",
+        "dashboards",
+        "React",
+        "frontend",
+        "full stack"
+      ],
+      "url": "https://spets-trading.vercel.app"
+    }
+  ],
+
+  "weakOrUnverified": [
+    "deep Solidity smart contract security auditing",
+    "CUDA",
+    "deep PyTorch model training",
+    "advanced ML research",
+    "native iOS Swift development",
+    "Salesforce architecture",
+    "deep enterprise AWS architecture"
+  ]
+}

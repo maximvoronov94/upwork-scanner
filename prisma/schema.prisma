@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum JobStatus {
+  NEW
+  ANALYZING
+  APPLY_NOW
+  HIDDEN
+  MAYBE
+  SKIP
+  APPLIED
+  INTERVIEW
+  HIRED
+  REJECTED
+  CLOSED
+}
+
+model Job {
+  id         String  @id @default(cuid())
+  externalId String? @unique
+  url        String? @unique
+
+  title       String
+  description String @db.Text
+
+  jobType String?
+
+  budgetMin Float?
+  budgetMax Float?
+
+  hourlyMin Float?
+  hourlyMax Float?
+
+  currency String?
+
+  skills Json?
+
+  proposalsLabel String?
+  proposalsMin   Int?
+  proposalsMax   Int?
+
+  hires        Int?
+  interviewing Int?
+
+  clientCountry   String?
+  clientRating    Float?
+  clientSpent     Float?
+  clientHires     Int?
+  paymentVerified Boolean?
+
+  locationRequirement String?
+  locationAllowed     Boolean?
+
+  postedAt    DateTime?
+  firstSeenAt DateTime  @default(now())
+  lastSeenAt  DateTime  @default(now())
+
+  technicalMatch   Int?
+  portfolioMatch   Int?
+  freshnessScore   Int?
+  competitionScore Int?
+  clientScore      Int?
+  locationScore    Int?
+  opportunityScore Int?
+
+  canDo       Boolean?
+  hardBlocker Boolean  @default(false)
+
+  category    String?
+  bestProject String?
+
+  matchReasons  Json?
+  missingSkills Json?
+  risks         Json?
+
+  status JobStatus @default(NEW)
+
+  proposal        String? @db.Text
+  proposalProject String?
+
+  descriptionHash String?
+
+  appliedAt    DateTime?
+  clientViewed Boolean   @default(false)
+  interview    Boolean   @default(false)
+  hired        Boolean   @default(false)
+  rejected     Boolean   @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model AppSettings {
+  id String @id @default(cuid())
+
+  minimumMatch       Int @default(70)
+  fastMatchMinimum   Int @default(80)
+  hiddenMatchMinimum Int @default(75)
+
+  maximumFastAgeMinutes   Int @default(60)
+  maximumHiddenAgeMinutes Int @default(180)
+
+  maximumFastProposals   Int @default(10)
+  maximumHiddenProposals Int @default(5)
+
+  minimumHourly      Float?
+  minimumFixedBudget Float?
+
+  telegramEnabled Boolean @default(false)
+
+  aiProvider String @default("ollama")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
